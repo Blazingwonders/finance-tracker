@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Finance Tracker</title>
+
+</head>
+<body>
+    
+    <header>
+        <h1>Finance Tracker</h1>
+
+        <!--
+        <nav>
+            <ul>
+                <li class="nav-item" role="presentation"><a href="#home" class="navtext">Home</a></li>
+                <li class="nav-item" role="presentation"><a href="#analysis" class="navtext">Analysis</a></li>
+                <li class="nav-item" role="presentation"><a href="#preferences" class="navtext">Preferences</a></li>
+                <li class="nav-item" role="presentation"><a href="#profile" class="navtext">Profile</a></li>
+                
+            </ul>
+        </nav> 
+        --> 
+    </header>
+
+
+
+    <div class="container">
+        
+        <div class="chart-container">
+            <!--<h2>Dashboard</h2>-->
+
+            <div class="dashboard">
+
+                <div class="dashcontent" >
+                    <div>
+                        <h2 id="title">TOTAL EXPENDITURES</h2>
+                    </div>
+
+                    <div id="canvadiv">
+                        <canvas id="pie-chart" class="animate-pie-chart"></canvas>
+                    </div>
+
+                    <div id="optionsdisplay">
+                        <button class="pieoptions" id="week">WEEK</button>
+                        <button class="pieoptions" id="month">MONTH</button>
+                        <button class="pieoptions" id="year">YEAR</button>
+                        <button class="pieoptions active" id="all">ALL TIME</button>
+                        <button class="pieoptions" id="custom">COSTOM</button>
+                    </div>
+                </div>
+                
+    
+                <div id="expenditure" class="dashcontent">
+                    <div class="expencontent">
+                        <h2 class="visexpend" id="moneyspend"></h2>
+                    </div>
+
+                    <div class="expencontent">
+                        <h2>7 days left</h2>
+                        <h2>21 Euros remaining</h2>
+                    </div>
+                </div>
+
+                <div id="addExpense" class="dashcontent">
+                    <div class="button-container">
+                        <h2 id="title">ADD EXPENSE</h2>
+                        <div class="category-div">
+                            <button id="category" class="expenseDetails">Category</button>
+                            <div class="dropdown-menu-category">
+                                <a href="#option1" onclick="handleItemClick('category', 'Food')">Food</a>
+                                <a href="#option2" onclick="handleItemClick('category','Transport')">Transport</a>
+                                <a href="#option3" onclick="handleItemClick('category', 'Housing')">Housing</a>
+                                <a href="#option4" onclick="handleItemClick('category','Entertainment')">Entertainment</a>
+                                <a href="#option5" onclick="handleItemClick('category','Clothing')">Clothing</a>
+                                <a href="#option6" onclick="handleItemClick('category','Others')">Others</a>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="price-div">
+                            <button id="price" class="expenseDetails">Price</button>
+                            <div class="dropdown-menu-price">
+                                <div id="priceInputDiv">
+                                    <input type="float" id="priceInput">
+                                    <button type="submit" id="priceSubmit" onclick="handlePriceInput()">Save</button> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="date-div">
+                            <button id="date" class="expenseDetails">Date</button>
+                            <div class="dropdown-menu-date">
+                                <div id="dateInputDiv">
+                                    <input type="date" id="dateInput" value="dateEnter">
+                                    <button type="submit" id="dateSubmit" onclick="handleDateInput()">Save</button> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- sendExpenseToServer -->
+                        <div class="description-div">
+                            <button id="description" class="expenseDetails">Description</button>                         
+                            <div class="dropdown-menu-description">
+                                <div id="descriptionInputDiv">
+                                    <input type="text" id="descriptionInput">
+                                    <button type="submit" id="descriptionSubmit" onclick="handleDescriptionInput()">Save</button> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="save-div">
+                            <button id="submitExpenseBtn" class="expenseDetails" onclick="postData()">Save Expense</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="addExpenseAi">
+            
+            <!--<h2>UPLOAD BILL</h2> -->
+
+            <form id="uploadForm">
+
+                <!--
+                <div id="custom-file-input" >
+                    <label class="custom-file-button">Choose File</label>
+                    <input type="file" id="imageInput" name="picture" accept="image/*" capture="environment"/>
+                    <span class="file-name"></span>
+
+                    <button type="submit">UPLOAD</button>
+                </div>
+                -->
+
+                <div class="file-upload-container">
+                    <span class="custom-button">CHOOSE PICTURE</span>
+                    <span class="selected-file">No file chosen</span>
+                    <input id="imageUpload" type="file">
+                </div>
+                <div class="sendBtnDiv">
+                    <button id="sendImage">UPLOAD</button>
+                </div>
+
+                <div id="aiResponse">
+                    
+                </div>   
+            </form>
+
+            <div id="addAiResponseToExpenses">
+                <button id="addExpenseBtn">ADD EXPENSE</button>
+            </div>
+        
+        </div>
+
+        <div class="statistics">
+            <div class="stat">
+                <h3>Total Balance</h3>
+                <p>$12,345</p>
+            </div>
+            <div class="stat">
+                <h3>Income</h3>
+                <p>$8,910</p>
+            </div>
+            <div class="stat">
+                <h3>Expenses</h3>
+                <p>$4,567</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+   
+</body>
+</html>

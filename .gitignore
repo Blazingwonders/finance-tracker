@@ -14,6 +14,16 @@
 /frontend/yarn-error.log*
 /frontend/pnpm-debug.log*
 /frontend/lerna-debug.log*
+/frontend/src/
+/frontend/public/
+/frontend/eslint.config.js
+/frontend/index.html
+/frontend/package-lock.json
+/frontend/package.json
+/frontend/README.md
+/frontend/vite.vonfig.js
+/frontend/web/code-snippets.txt
+
 
 # ---------------------------
 # Backend
