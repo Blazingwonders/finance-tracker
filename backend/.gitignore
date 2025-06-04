@@ -1,8 +1,8 @@
-node_modules
+node_modules/
 .env
 .DS_Store
 
 
-.debug-env.js
-.check-env-file.js
-.comprehensive-test.js
+src/debug-env.js
+src/config/check-env-file.js
+src/config/comprehensive-test.js
