@@ -21,7 +21,7 @@
 /frontend/package-lock.json
 /frontend/package.json
 /frontend/README.md
-/frontend/vite.vonfig.js
+/frontend/vite.config.js
 /frontend/web/code-snippets.txt
 
 
@@ -46,3 +46,5 @@
 *.njsproj
 *.sln
 *.sw?
+
+.vscode/
