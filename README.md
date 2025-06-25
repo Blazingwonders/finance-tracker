@@ -113,7 +113,7 @@ NODE_ENV=development
 ```
 
 5. Get Google AI API Key
-- Go to [Google AI Studio] (https://aistudio.google.com/app/apikey)
+- Go to [Google AI Studio](https://aistudio.google.com/app/apikey)
 - Create a new API key
 - Add it to your `.env` file
 
